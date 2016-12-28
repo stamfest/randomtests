@@ -1,0 +1,23 @@
+%1$s --in random.dat -l 1000000
+    Read as many 1 million bit sequences from the binary file random.dat file
+    and produce a final assessment using the standard set of tests.
+
+%1$s --in random.dat --inform ascii -l 1000000 -n 100 --continuous
+    Read 1 million bit sequences from the ascii-formatted file random.dat. 
+    Produce a common report for every 100 sequences using the standard set of
+    tests for as long as there is more data available.
+
+%1$s --list-rng
+    Show a list of all available SecureRandom implementations available
+
+%1$s --rng NativePRNG@SUN --testfile /dev/null --out random.dat \
+        --outform ascii -l 10000 -n 100
+    Create 100 bit sequences with 10000 bits each using the random number
+    generator algorithm NativePRNG from the SUN security provider. Write them
+    to the file random.dat in ASCII format. No tests get performed.
+    (NOTE: /dev/null is UNIX specific, use NUL on windows instead)
+
+%1$s --in randomin.dat --testfile /dev/null --out randomout.dat \
+        --outform ASCII -l 10000
+    Read as many 10000 bit long sequences from randomin.dat as available,
+    perform no tests but write these sequences to randomout.dat in ASCII format.

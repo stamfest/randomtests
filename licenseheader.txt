@@ -1,0 +1,8 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}This is copyrighted code.  All rights reserved.
+${licensePrefix}Please see the file license.txt for details.
+<#if licenseLast??>
+${licenseLast}
+</#if>

@@ -1,0 +1,108 @@
+
+Source code under the net.stamfest.randomtests.nist package 
+-----------------------------------------------------------
+
+The source code under the net.stamfest.randomtests.nist package
+is derived from source code released by NIST, namely from the downloaded
+file sts-2.1.1.zip
+
+The original code seems to be covered by a BSD style license (although this 
+is not entirely clear, IANAL), but under this assumption this license covers 
+the code which is the base for the stuff under net.stamfest.randomtests.nist 
+
+Test classes and test-data may also include NIST data taken from either 
+the NIST publication of from the original sources. Some other test data
+was produced using the original C-based NIST software interactively.
+
+All this being said: I do not want to infringe on any NIST rights and I want
+this version to be able to be redistributed as far as possible.  
+
+Note: For other licenses covering parts of the code: read on
+
+This is the original license as found in the NIST code file src/assess.c:
+
+/* --------------------------------------------------------------------------
+   Title       :  The NIST Statistical Test Suite
+
+   Date        :  December 1999
+
+   Programmer  :  Juan Soto
+
+   Summary     :  For use in the evaluation of the randomness of bitstreams
+                  produced by cryptographic random number generators.
+
+   Package     :  Version 1.0
+
+   Copyright   :  (c) 1999 by the National Institute Of Standards & Technology
+
+   History     :  Version 1.0 by J. Soto, October 1999
+                  Revised by J. Soto, November 1999
+                  Revised by Larry Bassham, March 2008
+
+   Keywords    :  Pseudorandom Number Generator (PRNG), Randomness, Statistical 
+                  Tests, Complementary Error functions, Incomplete Gamma 
+                  Function, Random Walks, Rank, Fast Fourier Transform, 
+                  Template, Cryptographically Secure PRNG (CSPRNG),
+                  Approximate Entropy (ApEn), Secure Hash Algorithm (SHA-1), 
+                  Blum-Blum-Shub (BBS) CSPRNG, Micali-Schnorr (MS) CSPRNG, 
+
+   Source      :  David Banks, Elaine Barker, James Dray, Allen Heckert, 
+                  Stefan Leigh, Mark Levenson, James Nechvatal, Andrew Rukhin, 
+                  Miles Smid, Juan Soto, Mark Vangel, and San Vo.
+
+   Technical
+   Assistance  :  Larry Bassham, Ron Boisvert, James Filliben, Daniel Lozier,
+                  and Bert Rust.
+
+   Warning     :  Portability Issues.
+
+   Limitation  :  Amount of memory allocated for workspace.
+
+   Restrictions:  Permission to use, copy, and modify this software without 
+                  fee is hereby granted, provided that this entire notice is 
+                  included in all copies of any software which is or includes
+                  a copy or modification of this software and in all copies 
+                  of the supporting documentation for such software.
+   -------------------------------------------------------------------------- */
+
+Other code
+----------
+
+Other source code was written by Peter Stamfest and is covered by a 2-clause 
+BSD-style license:
+
+-------------------------------------------------------------------------------
+
+Copyright (c) 2016, Peter Stamfest <oss@stamfest.at>
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, 
+   this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation 
+   and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY PETER STAMFEST AND CONTRIBUTORS "AS IS" AND ANY 
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE 
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL 
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR 
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER 
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+R TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE 
+USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-------------------------------------------------------------------------------
+
+Third party code
+----------------
+
+The maven pom file references some third-party software. At the time of writing 
+the referenced versions of those third party software products have been compatible 
+with the licenses in this file. If you want to include the software in another
+software product, it is your responsibility to review all license requirements.

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Note: This script may have problems with white-space within
+# its arguments, because the maven exec plugin currently does 
+# not allow to pass multiple argumens in a sane way. So we
+# have to use the "$*" construct to pack all arguments into 
+# one and leave word-splitting to maven - which might be
+# different than what the shell want. You have been warned.
+# If you have problems with this script, consider to use 
+# on of the other rndtest script instead
+exec mvn exec:java -Dexec.args="$*"
+

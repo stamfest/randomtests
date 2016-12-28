@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ARTIFACT_VERSION=*
+exec java -jar target/randomtests-${ARTIFACT_VERSION}-jar-with-dependencies.jar "$@"
+

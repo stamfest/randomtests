@@ -1,0 +1,8 @@
+#!/bin/bash
+
+ARTIFACT_VERSION=*
+JAR=$(echo target/randomtests-${ARTIFACT_VERSION}-jar-with-dependencies.jar)
+# add the classes directory in from of the dependency-including jar to
+# pick up changed classes AND dependencies
+exec java -cp target/classes:${JAR} net.stamfest.randomtests.tools.Tool "$@"
+
