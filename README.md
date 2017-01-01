@@ -55,6 +55,30 @@ Assess allows to run any sequence of supported tests by passing a "testfile" nam
 tests to be run. There is a standard list of tests which can be shown by passing
 `--show-tests` with no other options present.
 
+Note: if multiple sequences are tested using this tool, they are processed in parallel on 
+multi-processor systems.
+
+### Examples
+
+Run the standard NIST test suite on the standard JDK random number generator using 100 
+bit sequences with 1 millon bits each, showing basic progress information.
+
+    Assess --rng NativePRNGNonBlocking@SUN --seqlength 1000000 --seqcount 100 --progress
+
+This might take considerable time, depending on the CPUs available. It will produce 
+a report similar to the report from the orignal NIST tool. The results for identical
+input should be identical to the ones reported by the NIST tool.
+
+The extended example
+
+    Assess --rng NativePRNGNonBlocking@SUN --seqlength 1000000 --seqcount 100 --out tested.bits --report-dir reports --progress
+
+also produces an output file (`tested.bits`) holding all the tested 
+bits. This might be interesting to be able to (re)test the exact same sequence with 
+other settings. It also creates an output directory (`reports`), where it puts more detailed information 
+about all the executed tests.
+
+
 Data Format
 ===========
 
@@ -86,6 +110,42 @@ or '1' get silently ignored. This means that the string "10 011x010b110N! 0"
 corresponds to the bit sequence
 
 100110101100
+
+Test definition file
+====================
+
+The tests the `Assess` tool applies to its input data can be configured through 
+a  "testfile". This file contains one test definiton per line. Every line is 
+the  class name of a NistTest sub class to instantiate (including the 
+package name in standard java notation. The package name may be omitted if the 
+class is within the package net.stamfest.randomtests.nist.)
+
+Optionally, the class name may be followed by a list of arguments within
+parentheses. The argument list will be passed to the matchings constructor.
+
+The actually used list of tests can be requested from the Assess to by using the 
+`--show-tests` option.
+
+The standard list of tests is 
+
+```
+Frequency
+BlockFrequency(128)
+CumulativeSums
+Runs
+LongestRunOfOnes
+Rank
+DiscreteFourierTransform
+NonOverlappingTemplateMatchings(9)
+OverlappingTemplateMatching(9)
+Universal
+ApproximateEntropy(10)
+RandomExcursions
+RandomExcursionsVariant
+Serial(16)
+LinearComplexity(500)
+```
+
 
 Licensing
 ---------

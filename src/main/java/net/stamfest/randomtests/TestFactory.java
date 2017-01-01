@@ -15,10 +15,10 @@ import net.stamfest.randomtests.nist.NistTest;
  * representations. This is useful for human input (like command line
  * arguments).
  *
- * A text representation is simply either the class name of the {@link NistTest}
+ * A text representation is simply the class name of the {@link NistTest}
  * class to instantiate (including the package name in standard java notation.
  * The package name may be omitted if the class is within the package
- * net.stamfest.randomtests.nist.
+ * net.stamfest.randomtests.nist).
  *
  * Optionally, the class name may be followed by a list of arguments within
  * parentheses. The argument list will be passed to the matchings constructor.
