@@ -146,6 +146,11 @@ Serial(16)
 LinearComplexity(500)
 ```
 
+Source code documentation
+=========================
+
+During the maven build process javadoc documentation gets created in the `target/apidocs` 
+directory.
 
 Licensing
 ---------
